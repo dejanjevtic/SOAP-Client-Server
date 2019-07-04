@@ -1,10 +1,12 @@
 <?php
 try{
-	$soapclinet = new SoapClient('http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx');
+	$soapclient = new SoapClient('http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx?wsdl');
 	
 	$response = $soapclient->GetCountriesAvailable();
+	
+	var_dump($response);
 }
 catch(Exception $e){
-	$e->getMessage();
+	echo $e->getMessage();
 }
 ?>
