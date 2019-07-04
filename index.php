@@ -5,6 +5,10 @@ try{
 	$response = $soapclient->GetCountriesAvailable();
 	
 	var_dump($response);
+	echo "<br><br><br>";
+	$array = json_decode(json_encode($response), true);
+	
+	print_r($array);
 }
 catch(Exception $e){
 	echo $e->getMessage();
