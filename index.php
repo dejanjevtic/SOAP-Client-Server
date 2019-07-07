@@ -9,6 +9,9 @@ try{
 	$array = json_decode(json_encode($response), true);
 	
 	print_r($array);
+	echo "<br><br><br>";
+	
+	echo $array['GetCountriesAvailableResult']['CountryCode']['3']['Description'];
 }
 catch(Exception $e){
 	echo $e->getMessage();
