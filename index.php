@@ -12,6 +12,13 @@ try{
 	echo "<br><br><br>";
 	
 	echo $array['GetCountriesAvailableResult']['CountryCode']['3']['Description'];
+	
+	echo "<br><br><br>";
+	
+	foreach($array as $item) {
+		echo '<pre>';
+		var_dump($item);
+	}
 }
 catch(Exception $e){
 	echo $e->getMessage();
