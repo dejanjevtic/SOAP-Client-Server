@@ -2,8 +2,8 @@
 try{
 	$soapclient = new SoapClient('http://www.holidaywebservice.com/HolidayService_v2/HolidayService2.asmx?wsdl');
 	
-	$param = array('countryCode'=>'Scotland');
-	$response = $soapclient->GetHolidaysAvailable($param);
+	$param = array('countryCode'=>'Scotland','year'=>'2018');
+	$response = $soapclient->GetHolidaysForYear($param);
 	
 	var_dump($response);
 	echo "<br><br><br>";
@@ -12,7 +12,7 @@ try{
 	print_r($array);
 	echo "<br><br><br>";
 	
-	echo $array['GetHolidaysAvailableResult']['HolidayCode']['20']['Description'];
+	//echo $array['GetHolidaysAvailableResult']['HolidayCode']['20']['Description'];
 	
 	echo "<br><br><br>";
 	
